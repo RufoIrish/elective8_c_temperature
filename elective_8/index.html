@@ -14,46 +14,11 @@
 		overflow: hidden;
 	}
 
-	#divConnect {
-		position: fixed;
-		width: 26%;
-		left: 5%;
-		margin-top: -25%;
-		background-color: white;
-		padding: 10px;
-		box-shadow: 5px 10px #888888;
-		border-radius: 5%;
-		height: 300px;
-	}
-
-	#divSubscribe {
-		position: fixed;
-		width: 26%;
-		left: 70%;
-		margin-top: -25%;
-		background-color: white;
-		padding: 10px;
-		box-shadow: 5px 10px #888888;
-		border-radius: 5%;
-		height: 300px;
-	}
-
-	#divPublish {
-		position: fixed;
-		margin-top: -25%;
-		width: 26%;
-		left: 38%;
-		background-color: white;
-		padding: 10px;
-		box-shadow: 5px 10px #888888;
-		border-radius: 5%;
-		height: 300px;
-	}
 
 	#messages {
 		position: relative;
 		width: 100%;
-		margin-top: 25%;
+		margin-top: 1%;
 		padding-left: 5%;
 		padding-right: 5%;
 	}
@@ -96,64 +61,6 @@
 </style>
 
 <body>
-	<div id="main">
-		<div id="divConnect">
-			<center>
-				<h2>Connect</h2>
-			</center>
-			<form>
-				<div class="form-group">
-					<label for="brokerAddress">Address</label>
-					<input type="text" class="form-control" id="brokerAddress"
-						value="wss://test.mosquitto.org:8081/mqtt">
-				</div>
-			</form>
-			<button id="btnConnect" class="btn btn-success">Connect</button>
-			<button id="btnDisconnect" class="btn btn-danger">Disconnect</button>
-			<div>
-				<br>
-				<fieldset>
-					<legend>Status:</legend>
-					<center>
-						<i>
-							<h4 id="status">Disconnected</h4>
-						</i>
-					</center>
-				</fieldset>
-			</div>
-		</div>
-
-		<div id="divPublish">
-			<center>
-				<h2>Publish</h2>
-			</center>
-			<form>
-				<div class="form-group">
-					<label for="topicToPublish">Topic</label>
-					<input type="text" class="form-control" id="topicToPublish" value="">
-				</div>
-				<div class="form-group">
-					<label for="payloadToPublish">Payload</label>
-					<input type="text" class="form-control" id="payloadToPublish" value="">
-				</div>
-			</form>
-			<button id="btnPublish" class="btn btn-success btn-block">Publish</button>
-		</div>
-
-		<div id="divSubscribe">
-			<center>
-				<h2>Subscribe</h2>
-			</center>
-			<form>
-				<div class="form-group">
-					<label for="topicToSubscribe">Topic</label>
-					<input type="text" class="form-control" id="topicToSubscribe">
-				</div>
-			</form>
-			<button id="btnSubscribe" class="btn btn-success">Subscribe</button>
-			<button id="btnUnsubscribe" class="btn btn-danger">Unsubscribe</button>
-		</div>
-	</div>
 	<div id="container">
 		<div id="messages">
 			<div class="row">
@@ -173,11 +80,11 @@
 							<tbody>
 								<tr>
 									<td>Burce-Avila</td>
-									<td id="bu-rat">default</td>
+									<td id="rat">default</td>
 								</tr>
 								<tr>
 									<td>Morre-Sugal</td>
-									<td id="morre-sugal">default</td>
+									<td id="sugal">default</td>
 								</tr>
 							</tbody>
 						</table>
@@ -199,11 +106,11 @@
 							<tbody>
 								<tr>
 									<td>Ivy-Marion</td>
-									<td id="ivy-marion">default</td>
+									<td id="marion">default</td>
 								</tr>
 								<tr>
 									<td>Duran-Gigante</td>
-									<td id="duran-gigante">default</td>
+									<td id="gigante">default</td>
 								</tr>
 							</tbody>
 						</table>
@@ -225,7 +132,7 @@
 							<tbody>
 								<tr>
 									<td>Renan-Jane</td>
-									<td id="bargs-jane">default</td>
+									<td id="jane">default</td>
 								</tr>
 
 							</tbody>
@@ -251,7 +158,7 @@
 							<tbody>
 								<tr>
 									<td>Hannah-Patrick</td>
-									<td id="Hannah/Patrick">default</td>
+									<td id="Patrick">default</td>
 								</tr>
 							</tbody>
 						</table>
@@ -272,8 +179,8 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td>Chirven-Keray</td>
-									<td id="sensor/temperature/tanilon">default</td>
+									<td>Chervin-Keray</td>
+									<td id="tanilon">default</td>
 								</tr>
 							</tbody>
 						</table>
@@ -299,7 +206,7 @@
 								</tr>
 								<tr>
 									<td>Lalaine-Jake</td>
-									<td id="lalaine/jake">default</td>
+									<td id="jake">default</td>
 								</tr>
 							</tbody>
 						</table>
@@ -324,7 +231,7 @@
 							<tbody>
 								<tr>
 									<td>Chilla-Yol</td>
-									<td id="aspire/device">default</td>
+									<td id="device">default</td>
 								</tr>
 							</tbody>
 						</table>
@@ -372,7 +279,7 @@
 							<tbody>
 								<tr>
 									<td>No Using</td>
-									<td >default</td>
+									<td>default</td>
 								</tr>
 							</tbody>
 						</table>
@@ -384,7 +291,7 @@
 	</div>
 	</div>
 
-	</div>
+
 
 </body>
 <script src="scripts/browserMqtt.js"></script>

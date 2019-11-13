@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Mr Clay MqttWeb</title>
+    <link rel="icon" type="icon" href="icon.png">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    body {
+        margin-top: 5%;
+        overflow: hidden;
+    }
+    
+    #divConnect {
+        width: 26%;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 5px 10px #888888;
+        border-radius: 5%;
+        height: 300px;
+    }
+    
+    fieldset {
+        margin-left: 10%;
+    }
+    
+    #status {
+        color: red;
+    }
+    
+    span {
+        float: right;
+        position: relative;
+        top: -50%;
+    }
+</style>
+
+<body>
+    <center>
+        <div id="main">
+            <div id="divConnect">
+                <center>
+                    <h2>IOT Switch</h2>
+                </center>
+                <button id="btnOn" class="btn btn-success">On</button>
+                <button id="btnOff" class="btn btn-danger">Off</button>
+                <div>
+                    <br>
+                    <fieldset>
+                        <legend>Status:</legend>
+                        <center>
+                            <i>
+							<h4 id="status">The laser is currently turned off</h4>
+						</i>
+                        </center>
+                    </fieldset>
+                </div>
+            </div>
+    </center>
+
+</body>
+<script src="scripts/browserMqtt.js"></script>
+<script src="scripts/controller.js"></script>
+
+</html>
